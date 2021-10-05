@@ -1,5 +1,5 @@
 {
-  "name": "@dotcode.moscow/trix-columns",
+  "name": "@mixtint/trix-ext",
   "version": "1.0.0",
   "main": "dist/custom-trix.js",
   "scripts": {
@@ -12,9 +12,9 @@
     "columns"
   ],
   "author": {
-    "name": "dotcode moscow",
-    "email": "info@dotcode.moscow",
-    "url": "https://dotcode.moscow"
+    "name": "Eric-Guo",
+    "email": "eric@cloud-mes.com",
+    "url": "https://github.com/Eric-Guo"
   },
   "license": "MIT",
   "description": "Columns in Trix editor",
