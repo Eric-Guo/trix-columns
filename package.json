@@ -17,7 +17,7 @@
     "url": "https://github.com/Eric-Guo"
   },
   "license": "MIT",
-  "description": "Columns in Trix editor",
+  "description": "Ext in Trix editor",
   "dependencies": {
     "jquery": "^3.6.0",
     "mini-css-extract-plugin": "^2.3.0",
@@ -32,10 +32,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "npmhttps://github.com/dotcode-moscow/trix-columns.git"
+    "url": "git@github.com:Eric-Guo/trix-ext.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "bugs": {
-    "url": "https://github.com/dotcode-moscow/trix-columns/issues"
+    "url": "https://github.com/Eric-Guo/trix-ext/issues"
   },
-  "homepage": "https://github.com/dotcode-moscow/trix-columns#readme"
+  "homepage": "https://github.com/Eric-Guo/trix-ext#readme"
 }
