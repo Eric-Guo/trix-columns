@@ -1,5 +1,8 @@
 import iframeIcon from '../svg/iframe.svg'
 import tableIcon from '../svg/table.svg'
+import leftIcon from '../svg/eleft.svg'
+import centerIcon from '../svg/ecenter.svg'
+import rightIcon from '../svg/eright.svg'
 
 export default class CustomTrix {
     constructor(trixInitializeEvent) {
@@ -14,6 +17,9 @@ export default class CustomTrix {
     createButtons() {
         this.getTrixContainer().find('.trix-button-group.trix-button-group--file-tools').append(this.generateDialogButton('custom_trix_video', `<svg width="20" height="20"><use xlink:href="#iframe"></use></svg>`));
         this.getTrixContainer().find('.trix-button-group.trix-button-group--file-tools').append(this.generateTagButton('custom_trix_element', `<svg width="20" height="20"><use xlink:href="#table"></use></svg>`));
+        this.getTrixContainer().find('.trix-button-group.trix-button-group--file-tools').append(this.generateTagButton('custom_left', `<svg width="20" height="20"><use xlink:href="#eleft"></use></svg>`));
+        this.getTrixContainer().find('.trix-button-group.trix-button-group--file-tools').append(this.generateTagButton('custom_center', `<svg width="20" height="20"><use xlink:href="#ecenter"></use></svg>`));
+        this.getTrixContainer().find('.trix-button-group.trix-button-group--file-tools').append(this.generateTagButton('custom_right', `<svg width="20" height="20"><use xlink:href="#eright"></use></svg>`));
     }
 
     generateDialogButton(name, content){
@@ -79,6 +85,42 @@ export default class CustomTrix {
         Trix.config.blockAttributes.custom_trix_video = {
             tagName: 'custom_trix_video',
             inheritable: true,
+        };
+
+        Trix.config.textAttributes.custom_left = {
+            tagName: 'p',
+            style: {
+                textAlign: "left",
+            },
+            inheritable: true,
+            parser: (element) => {
+                const style = window.getComputedStyle(element);
+                return style.textAlign === "left";
+            }
+        };
+
+        Trix.config.textAttributes.custom_center = {
+            tagName: 'p',
+            style: {
+                textAlign: "center",
+            },
+            inheritable: true,
+            parser: (element) => {
+                const style = window.getComputedStyle(element);
+                return style.textAlign === "center";
+            }
+        };
+
+        Trix.config.textAttributes.custom_right = {
+            tagName: 'p',
+            style: {
+                textAlign: "right",
+            },
+            inheritable: true,
+            parser: (element) => {
+                const style = window.getComputedStyle(element);
+                return style.textAlign === "right";
+            }
         };
     }
 }
